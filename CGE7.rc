@@ -53,8 +53,9 @@ BEGIN
         MENUITEM SEPARATOR
         POPUP "Export"
         BEGIN
-            MENUITEM "Raw",                         IDM_EXPORT_RAW
-            MENUITEM "Compressed",                  IDM_EXPORT_COMPRESSED
+            MENUITEM "Source - Raw",                IDM_EXPORT_RAW
+            MENUITEM "Source - Compressed",         IDM_EXPORT_COMPRESSED
+            MENUITEM "Binary",                      IDM_EXPORT_BINARY
         END
         MENUITEM SEPARATOR
         MENUITEM "Load Overlay BMP",            IDM_LOADBMP

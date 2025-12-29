@@ -1756,6 +1756,12 @@ void exportCompressed( HWND hWnd ) {
 	CloseHandle(file);
 }
 
+void exportBinary(HWND hWnd) {
+	HANDLE file = openExportFile(hWnd);
+	if (file == NULL) { return; }
+	exportBinaryFile(file);
+	CloseHandle(file);
+}
 
 /*---------------------------------------------------------------------------*/
 void treatmenu(HWND hwnd, HMENU hMenu) {
@@ -2503,6 +2509,12 @@ savefile:		land_floater();
 				land_floater();
 				hide_selection();
 				exportCompressed( hwnd );
+				return 0;
+
+			case IDM_EXPORT_BINARY:
+				land_floater();
+				hide_selection();
+				exportBinary( hwnd );
 				return 0;
 
 

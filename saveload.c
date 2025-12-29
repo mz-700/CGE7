@@ -562,3 +562,18 @@ void exportCompressedFile(HANDLE file) {
 	writeAnimations(file);
 }
 
+// --- Binary
+
+void writeBinaryData(HANDLE file, int* vbuf) {
+	char buf[1000];
+	for (int i = 0; i < 1000; i++) { buf[i] = vbuf[i] & 0xFF; }
+	long l;
+	WriteFile(file, buf, 1000, &l, NULL );
+}
+
+
+void exportBinaryFile(HANDLE file) {
+	writeBinaryData(file, chr);
+	writeBinaryData(file, atr);
+}
+

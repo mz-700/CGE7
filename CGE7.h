@@ -30,6 +30,7 @@
 #define	IDM_LOADBMP	1005
 #define IDM_EXPORT_COMPRESSED           40004
 #define IDM_EXPORT_RAW                  40005
+#define IDM_EXPORT_BINARY				40007
 
 #define IDM_RECENT_NONE 1010
 #define IDM_RECENT_1    1011
