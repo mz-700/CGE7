@@ -53,6 +53,9 @@ Here is the code to display the screen content:
         CALL    UNCOMPRESS
         RTS
     
+### TODO:
 
+- Allow multiple font ROMs
+- Enable japanese input string when japanese font ROM is selected
 
  
